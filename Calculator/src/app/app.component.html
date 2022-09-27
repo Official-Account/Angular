@@ -1,0 +1,41 @@
+<!-- <input type="text"  [value]="title" placeholder="0">&nbsp; -->
+
+<div class="container mt-5">
+      <!-- <h5>{{title}}</h5> -->
+
+     <input type="text" class="inputfield" value="{{input}}" placeholder="0">&nbsp;
+      <input type="hidden" class="result"  value="{{result}}">
+
+      <div class="first-row">
+        <button name="" class="global operand" (click)="pressNum('7')">7</button>
+        <button name="" class="global operand" (click)="pressNum('8')">8</button>
+        <button name="" class="global operand" (click)="pressNum('9')">9</button>
+        <button name="" class="global green white-text operator" (click)="pressOperator('/')">/</button>
+      </div>
+      <div class="second-row">        
+        <button name="" class="global operand" (click)="pressNum('4')">4</button>
+        <button  type="button" name="" class="global operand" (click)="pressNum('5')">5</button>
+        <button  type="button" name="" class="global operand" (click)="pressNum('6')">6</button>
+        <button type="button" name=""  class="global green white-text operator"  (click)="pressOperator('*')">X</button> 
+      </div>
+      <div class="third-row">
+        <button  type="button" name="" class="global operand" (click)="pressNum('1')">1</button>
+        <button  type="button" name="" class="global operand" (click)="pressNum('2')">2</button>
+        <button  type="button" name="" class="global operand" (click)="pressNum('3')">3</button>
+        <button  type="button" name="" class="global green white-text operator"  (click)="pressOperator('-')">-</button>
+
+      </div>
+     
+      <div class="third-row">
+          <button  type="button" name="" class="zero operand"  (click)="pressNum('0')">0</button>
+    
+          <button  type="button" name="" class="global green white-text operator" (click)="pressNum('.')">.</button>
+      </div>
+      <div class="third-row">
+          <button  type="button" name="" class="global green white-text operator" (click)="allClear()">C</button>
+          <button  type="button" name="" class="global green white-text operator" (click)="clear()">Del</button>
+          <button  type="button" name="" class="global green white-text operator" (click)="getResult()">=</button>
+          <button  type="button" name="" class="global green white-text operator"  (click)="pressOperator('+')">+</button>
+  
+      </div>
+    </div>
