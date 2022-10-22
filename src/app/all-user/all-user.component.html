@@ -1,0 +1,40 @@
+<div class="container-fluid effective-back">
+  <div class="row">
+    <div class="card" style="width:98%; margin: 10px auto;">
+        <div class="card-header text-white bg-success">
+          Customer Management Details
+        </div>
+        <div class="card-body">
+<table class="table table-striped ">
+    <thead class="thead-dark" >
+  <tr>
+    <!-- <th scope="col">Sn.{{hd}}</th> -->
+    <th scope="col">User Id</th>
+    <th scope="col">User Name</th>
+    <th scope="col">Phone</th>
+    <th scope="col">Email</th>
+    <th scope="col">State</th>
+    <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;Action</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngIf users.length="">no data </tr>
+
+  <tr *ngFor="let u of users"><!--ind`ex as i-->
+    <!-- <th scope="row">{{i+1}}</th> -->
+    <td>{{u.id}}</td>
+    <td>{{u.username}} </td>
+    <td>{{u.phonenumber}}</td>
+    <td>{{u.email}}</td>
+    <td>{{u.state}}</td>
+    <td>
+       <span><button type="button" class="btn btn-warning" [routerLink]="['/updateUser',u.id]"><i class="fa fa-edit"></i></button></span>&nbsp;
+       <span><button type="button" class="btn btn-danger" (click)="deleteUser(u.id)"><i class="fa fa-trash"></i></button></span>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</div>

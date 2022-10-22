@@ -1,0 +1,89 @@
+<div class="container-fluid">
+  <div class="row">
+  <div class="card" style="width:40%; margin: 10px auto;">
+      <div class="card-header text-white bg-success">
+        Edit User Details
+      </div>
+      <div class="card-body">
+          <form class="form-group" >
+              <div class="form-group">
+                <label for="user-name">User Name</label>
+                <input type="text" [(ngModel)]="user.username" class="form-control" id="username" name="username" [value]="user.username">
+              </div>
+              <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" [(ngModel)]="user.password" class="form-control" id="password" name="password">
+                </div>
+                <div class="form-group">
+                  <label for="phone-no">Phone</label>
+                  <input type="tel"  [(ngModel)]="user.phonenumber" class="form-control" id="phonenumber" name="phonenumber">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Email</label>
+                  <input type="email"  [(ngModel)]="user.email" class="form-control" id="eamil" name="eamil">
+                </div>
+                <div class="form-group">
+                  <label for="state">State</label>
+                  <select [(ngModel)]="user.state"  class="form-control" id="state" name="state">
+                    <option value="0">Select State</option>
+                    <option value="AN">Andaman and Nicobar Islands</option>
+                    <option value="AP">Andhra Pradesh</option>
+                    <option value="AR">Arunachal Pradesh</option>
+                    <option value="AS">Assam</option>
+                    <option value="BR">Bihar</option>
+                    <option value="CH">Chandigarh</option>
+                    <option value="CT">Chhattisgarh</option>
+                    <option value="DN">Dadra and Nagar Haveli</option>
+                    <option value="DD">Daman and Diu</option>
+                    <option value="DL">Delhi</option>
+                    <option value="GA">Goa</option>
+                    <option value="GJ">Gujarat</option>
+                    <option value="HR">Haryana</option>
+                    <option value="HP">Himachal Pradesh</option>
+                    <option value="JK">Jammu and Kashmir</option>
+                    <option value="JH">Jharkhand</option>
+                    <option value="KA">Karnataka</option>
+                    <option value="KL">Kerala</option>
+                    <option value="LA">Ladakh</option>
+                    <option value="LD">Lakshadweep</option>
+                    <option value="MP">Madhya Pradesh</option>
+                    <option value="MH">Maharashtra</option>
+                    <option value="MN">Manipur</option>
+                    <option value="ML">Meghalaya</option>
+                    <option value="MZ">Mizoram</option>
+                    <option value="NL">Nagaland</option>
+                    <option value="OR">Odisha</option>
+                    <option value="PY">Puducherry</option>
+                    <option value="PB">Punjab</option>
+                    <option value="RJ">Rajasthan</option>
+                    <option value="SK">Sikkim</option>
+                    <option value="TN">Tamil Nadu</option>
+                    <option value="TG">Telangana</option>
+                    <option value="TR">Tripura</option>
+                    <option value="UP">Uttar Pradesh</option>
+                    <option value="UT">Uttarakhand</option>
+                    <option value="WB">West Bengal</option>
+                 </select>
+                </div>
+                <div class="form-group">
+                  <label for="address">Address</label>
+                  <input type="text"  [(ngModel)]="user.address" class="form-control" id="address" name="address">
+                </div>
+                
+                  <br>
+                <div class="form-group text-center">
+                  <button type="submit" class="btn btn-primary mb-2" (click)="updateUser()">Submit</button>
+                </div>
+            </form>
+      </div>
+
+       <div class="card-footer" *ngIf="showAlert">
+          <div class="alert alert-success" role="alert">
+            <button class="close" (close)="closeAlert()">&times;</button>
+            <strong>Successfully Saved</strong>  
+          </div>
+       </div>
+    </div>
+    </div>
+    
+</div>
